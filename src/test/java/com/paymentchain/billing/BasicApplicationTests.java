@@ -12,7 +12,7 @@ public class BasicApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		String message = "Change to test jenkins pipeline github-webhub";
+		String message = "Change to test jenkins pipeline github-webhook";
 		Assert.assertNotNull(message);
 	}
 
