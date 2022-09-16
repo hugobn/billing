@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c59a97b1-eb0d-4a86-b558-202204adc329" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paymentchain/billing/dto/InvoiceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paymentchain/billing/dto/InvoiceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paymentchain/billing/dto/InvoiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paymentchain/billing/dto/InvoiceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paymentchain/billing/entities/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paymentchain/billing/entities/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/paymentchain/billing/BasicApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/paymentchain/billing/BasicApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/paymentchain/billing/dto/InvoiceRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paymentchain/billing/dto/InvoiceRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/paymentchain/billing/dto/InvoiceResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paymentchain/billing/dto/InvoiceResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/paymentchain/billing/entities/Invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paymentchain/billing/entities/Invoice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/paymentchain/billing/common/InvoiceRequestMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/paymentchain/billing/common/InvoiceRequestMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/paymentchain/billing/common/InvoiceResposeMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/paymentchain/billing/common/InvoiceResposeMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.paymentchain.billing.BasicApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.paymentchain.billing.BasicApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.paymentchain.billing.BasicApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.paymentchain.billing.BasicApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/paymentchain/billing/BasicApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/paymentchain/billing/BasicApplicationTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="c59a97b1-eb0d-4a86-b558-202204adc329" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +35,7 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
-    "app.teamhub.trackedBranches": "bbgpfu/feature-addtest,bbgpfu/master",
+    "app.teamhub.trackedBranches": "",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "/home/developer/Documents/billing",
     "node.js.detected.package.eslint": "true",
@@ -80,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663284070143</updated>
       <workItem from="1663284071549" duration="368000" />
-      <workItem from="1663284507565" duration="207000" />
+      <workItem from="1663284507565" duration="988000" />
     </task>
     <servers />
   </component>
