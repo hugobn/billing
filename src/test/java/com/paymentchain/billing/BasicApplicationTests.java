@@ -30,53 +30,31 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 /**
  * @author sotobotero This set of test allow check the behavior of the web layer
-feature/addtest
  * application listening like as it would do in production, sending and http
  * requests and assert if method was called and http status is the expected. We
  * are using spring MVC test framework to perfom integration tests
  * A context can be said as the running environment that is provided to the current unit of work. It may be the environment variables, instance variables, state of the classes, and so on.
  * In Spring web applications, there are two contexts that gets initialized at server startup, each of which is configured and initialized differently. One is the “Application Context” and the other is the “Web Application Context“
- *Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing. 
+ *Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing.
  * */
 @WebMvcTest(InvoiceRestController.class)
-/*allow test only http incoming request layer without start the server, 
+/*allow test only http incoming request layer without start the server,
         spring boot instatiates only the InvoiceRestController rather than the whole context*/
 @ExtendWith(SpringExtension.class)//junit5 suport extension interface hrough which classes can integrate with the JUnit test.
-@AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve, 
+@AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve,
         but starting the full spring application context*/
- * application listening like as it would do in production, sending and http requests and assert if method was called
- * and http status is the expected. We are using spring MVC test framework to perfom integration tests, A context can
- * be said as the running environment that is provided to the current unit of work. It may be the environment variables, instance variables, state of the classes, and so on.
- * In Spring web applications, there are two contexts that gets initialized at server startup, each of which is configured and initialized differently. One is the “Application Context” and the other is the “Web Application Context“
- * Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing.
- * */
-@WebMvcTest(InvoiceRestController.class)
-/*allow test only http incoming request layer without start the server, spring boot instantiates only the InvoiceRestController rather than the whole context*/
-@ExtendWith(SpringExtension.class)//junit5 support extension interface through which classes can integrate with the JUnit test.
-@AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve,but starting the full spring application context*/
 public class BasicApplicationTests {
-  
+
     @Autowired
     private MockMvc mockMvc;
-    @MockBean //mock the repository layer in order to have a unit test for weblayer 
+    @MockBean //mock the repository layer in order to have a unit test for weblayer
     private InvoiceRepository ir;
-    @MockBean //mock the mapper layer in order to have a unit test for weblayer 
+    @MockBean //mock the mapper layer in order to have a unit test for weblayer
     InvoiceRequestMapper irm;
-    @MockBean //mock the mapper layer in order to have a unit test for weblayer 
+    @MockBean //mock the mapper layer in order to have a unit test for weblayer
     InvoiceResposeMapper irspm;
     private static final String PASSWORD = "admin";
     private static final String USER = "admin";
-feature/addtest
-
-    public static String asJsonString(final Object obj) {
-        try {
-            final ObjectMapper mapper = new ObjectMapper();
-            final String jsonContent = mapper.writeValueAsString(obj);
-            return jsonContent;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     public static String asJsonString(final Object obj) {
         try {
@@ -105,74 +83,6 @@ feature/addtest
         ).andDo(print()).andExpect(status().isOk());
     }
 
-	@Autowired
-	private MockMvc mockMvc;
-	@MockBean //mock the repository layer in order to have a unit test for weblayer
-	private InvoiceRepository ir;
-	@MockBean //mock the mapper layer in order to have a unit test for weblayer
-	InvoiceRequestMapper irm;
-	@MockBean //mock the mapper layer in order to have a unit test for weblayer
-	InvoiceResposeMapper irspm;
-	private static final String PASSWORD = "admin";
-	private static final String USER = "admin";
-
-    /**
-     * Test call of create method, on weblayer.
-     */
-    @Test
-    public void testCreate() throws Exception {
-        Base64.Encoder encoder = Base64.getEncoder();
-        String encoding = encoder.encodeToString((USER + ":" + PASSWORD).getBytes());
-        Invoice mockdto = new Invoice();
-        Mockito.when(ir.save(mockdto)).thenReturn(mockdto);
-        Mockito.when(irm.InvoiceRequestToInvoice(new InvoiceRequest())).thenReturn(mockdto);
-        Mockito.when(irspm.InvoiceToInvoiceRespose(mockdto)).thenReturn(new InvoiceResponse());
-        this.mockMvc.perform(post("/billing").header("Authorization", "Basic " + encoding)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(mockdto))
-        ).andDo(print()).andExpect(status().isOk());
-    }
-
-feature/addtest
-    /**
-     * Test call of create method, on weblayer
-	/**
-	 * Test call of create method, on weblayer.
-	 */
-	@Test
-	public void testCreate() throws Exception {
-		Base64.Encoder encoder = Base64.getEncoder();
-		String encoding = encoder.encodeToString((USER + ":" + PASSWORD).getBytes());
-		Invoice mockdto = new Invoice();
-		Mockito.when(ir.save(mockdto)).thenReturn(mockdto);
-		Mockito.when(irm.InvoiceRequestToInvoice(new InvoiceRequest())).thenReturn(mockdto);
-		Mockito.when(irspm.InvoiceToInvoiceRespose(mockdto)).thenReturn(new InvoiceResponse());
-		this.mockMvc.perform(post("/billing").header("Authorization", "Basic " + encoding)
-				.contentType(MediaType.APPLICATION_JSON)
-				.content(asJsonString(mockdto))
-		).andDo(print()).andExpect(status().isOk());
-	}
-
-	/**
-	 * Test call of create method, on weblayer.
-	 */
-	@Test
-	public void testFindById() throws Exception {
-		Base64.Encoder encoder = Base64.getEncoder();
-		String encoding = encoder.encodeToString((USER + ":" + PASSWORD).getBytes());
-		Invoice mockdto = new Invoice();
-		mockdto.setId(1);
-		Mockito.when(ir.findById(mockdto.getId())).thenReturn(Optional.of(mockdto));
-		Mockito.when(irm.InvoiceRequestToInvoice(new InvoiceRequest())).thenReturn(mockdto);
-		InvoiceResponse invoiceResponse = new InvoiceResponse();
-		invoiceResponse.setInvoiceId(1);
-		Mockito.when(irspm.InvoiceToInvoiceRespose(mockdto)).thenReturn(invoiceResponse);
-		this.mockMvc.perform(get("/billing/{id}", mockdto.getId()).header("Authorization", "Basic " + encoding)
-						.accept(MediaType.APPLICATION_JSON)
-				).andDo(print()).andExpect(status().isOk())
-				.andDo(MockMvcResultHandlers.print())
-				.andExpect(MockMvcResultMatchers.jsonPath("$.invoiceId").value(1));
-	}
     /**
      * Test call of create method, on weblayer.
      */
@@ -180,7 +90,6 @@ feature/addtest
     public void testFindById() throws Exception {
         Base64.Encoder encoder = Base64.getEncoder();
         String encoding = encoder.encodeToString((USER + ":" + PASSWORD).getBytes());
-feature/addtest
         Invoice mockdto = new Invoice();
         mockdto.setId(1);
         Mockito.when(ir.findById(mockdto.getId())).thenReturn(Optional.of(mockdto));
@@ -189,16 +98,8 @@ feature/addtest
         invoiceResponse.setInvoiceId(1);
         Mockito.when(irspm.InvoiceToInvoiceRespose(mockdto)).thenReturn(invoiceResponse);
         this.mockMvc.perform(get("/billing/{id}", mockdto.getId()).header("Authorization", "Basic " + encoding)
-        Invoice mockito = new Invoice();
-        mockito.setId(1);
-        Mockito.when(ir.findById(mockito.getId())).thenReturn(Optional.of(mockito));
-        Mockito.when(irm.InvoiceRequestToInvoice(new InvoiceRequest())).thenReturn(mockito);
-        InvoiceResponse invoiceResponse = new InvoiceResponse();
-        invoiceResponse.setInvoiceId(1);
-        Mockito.when(irspm.InvoiceToInvoiceRespose(mockito)).thenReturn(invoiceResponse);
-        this.mockMvc.perform(get("/billing/{id}", mockito.getId()).header("Authorization", "Basic " + encoding)
-                .accept(MediaType.APPLICATION_JSON)               
-        ).andDo(print()).andExpect(status().isOk())
+                        .accept(MediaType.APPLICATION_JSON)
+                ).andDo(print()).andExpect(status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.invoiceId").value(1));
     }

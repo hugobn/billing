@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c59a97b1-eb0d-4a86-b558-202204adc329" name="Changes" comment="" />
+    <list default="true" id="c59a97b1-eb0d-4a86-b558-202204adc329" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/paymentchain/billing/BasicApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/paymentchain/billing/BasicApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,9 +39,9 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
-    "app.teamhub.trackedBranches": "",
+    "app.teamhub.trackedBranches": "1bu0iev/master",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/home/developer/Documents/billing",
+    "last_opened_file_path": "/home/developer/Documents/Testing/billing",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +69,7 @@
       <updated>1663284070143</updated>
       <workItem from="1663284071549" duration="368000" />
       <workItem from="1663284507565" duration="2310000" />
+      <workItem from="1663295658251" duration="166000" />
     </task>
     <servers />
   </component>
