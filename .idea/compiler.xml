@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+feature/addtest
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -31,6 +32,7 @@
         <module name="billing" />
       </profile>
     </annotationProcessing>
+feature/addtest
     <bytecodeTargetLevel>
       <module name="billing" target="1.8" />
     </bytecodeTargetLevel>
