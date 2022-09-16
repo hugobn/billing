@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(InvoiceRestController.class)
 /*allow test only http incoming request layer without start the server, spring boot instantiates only the InvoiceRestController rather than the whole context*/
 @ExtendWith(SpringExtension.class)  //junit5 support extension interface through which classes can integrate with the JUnit test.
-@AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve, but starting the full spring application context*/
+@AutoConfigureMockMvc   /*allow test only http incoming request layer without start the serve, but starting the full spring application context*/
 public class BasicApplicationTests {
 
     @Autowired
